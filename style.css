@@ -1,0 +1,14 @@
+body {
+  background-color: rgb(43, 43, 43);
+  color: rgb(147, 191, 175);
+}
+
+h1 {
+  text-transform: uppercase;
+}
+
+li {
+  color: rgb(167, 113, 12);
+  font-style: italic;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}

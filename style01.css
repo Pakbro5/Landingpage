@@ -1,0 +1,74 @@
+body {
+  background-color: rgb(52, 52, 52);
+}
+
+p {
+  color: skyblue;
+  font-family: 'Franklin Gothic Medium';
+}
+
+.element {
+  background-color: darkorange;
+}
+
+.other {
+  background-color: blueviolet;
+}
+
+a[href='nature.com'] {
+  color: brown;
+}
+
+a[href='national.com'] {
+  color: darkorange;
+}
+
+.coral,
+.red {
+  color: chartreuse;
+}
+
+h1 {
+  color: white;
+}
+
+li:first-child {
+  color: aquamarine;
+}
+
+li:last-child {
+  color: darkkhaki;
+}
+
+ol li {
+  color: bisque;
+}
+
+/* este H2 es hijo directo de este div (ponemos un signo "mayor qué" representando una flecha. Estos a su vez son etiquetas */
+
+div > h3 {
+  color: aqua;
+}
+
+footer p {
+  color: bisque;
+}
+
+/* este h2 esta dentro del "container", son selectores */
+
+.container > h2 {
+  color: chocolate;
+}
+
+/* 4 apartados = A B C D (TODO ESTO SE LE LLAMA "ESPECIFICIDAD")
+
+El A: representa el nivel de aplicaciones y estilos metidos mediante atributos.
+El B: sería un selector de id.
+El C: sería mediante clases o pseudoclases.
+El D: mediante elementos o pseudoelementos.
+
+clase -> 0 0 1 0 -> 1
+etiqueta -> 0 0 0 1 -> 1 (será más prioritaria la clase, porque el 1 de la clase prevalece una posición más que la etiqueta)
+id -> 0 1 0 0 -> 1 (aquí prevalece el id)
+
+Por último el !important, que prevalece por encima de todas, pero que conviene no utilizar a la ligera; existen otras opciones a la hora de posicionar los selectores y/o etiquetas.

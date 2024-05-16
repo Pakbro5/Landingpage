@@ -1,0 +1,54 @@
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: burlywood;
+}
+
+.content {
+  width: 80%;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande',
+    'Lucida Sans', Arial, sans-serif;
+  background-color: bisque;
+  padding: 1rem;
+  line-height: 1.3;
+  position: relative;
+}
+
+span {
+  border-bottom: 1px dotted black;
+  position: relative;
+  cursor: help;
+}
+
+.tooltiptext {
+  position: absolute;
+  border: none;
+  background-color: coral;
+  width: 160px;
+  min-height: 20px;
+  color: snow;
+  padding: 0.4rem;
+  text-align: center;
+  border-radius: 0.6rem;
+  font-size: 0.74rem;
+  right: -4rem;
+  bottom: 2rem;
+  visibility: hidden;
+}
+
+.tooltiptext::after {
+  content: '';
+  position: absolute;
+  border-left: 10px solid transparent;
+  border-bottom: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-top: 10px solid coral;
+  top: 58px;
+  left: 78px;
+}
+
+span:hover .tooltiptext {
+  visibility: visible;
+}

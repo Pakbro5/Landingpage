@@ -1,0 +1,48 @@
+/* Definición de variables en el pseudo-selector :root */
+:root {
+  /* Tamaño de fuente base */
+  --font-size-base: 16px;
+
+  /* Espaciados */
+  --spacing-small: 0.5rem; /* 8px */
+  --spacing-medium: 1rem; /* 16px */
+  --spacing-large: 2rem; /* 32px */
+
+  /* Colores */
+  --color-primary: #3498db;
+  --color-secondary: #e74c3c;
+}
+
+/* Establecer el tamaño de fuente base para el documento */
+body {
+  font-size: var(--font-size-base);
+}
+
+/* Un botón con dimensiones y espaciado basado en rem */
+.button {
+  padding: var(--spacing-small) var(--spacing-medium);
+  background-color: var(--color-primary);
+  color: white;
+  border: none;
+  border-radius: 0.25rem; /* 4px */
+}
+
+/* Un componente de tarjeta con un título y contenido */
+.card {
+  border: 1px solid #ddd;
+  padding: var(--spacing-medium);
+}
+
+.card-title {
+  font-size: 1.5rem; /* 24px */
+  margin-bottom: 0.5em; /* Esto se basará en el tamaño de fuente del .card-title, por lo que será 12px */
+}
+
+.card-content {
+  font-size: 1em; /* Esto se basará en el tamaño de fuente del elemento padre, en este caso, .card */
+}
+
+/* Si quisieras que un elemento dentro de .card tuviera un margen basado en el tamaño de fuente de .card-title, podrías hacer algo como esto: */
+.card .special-element {
+  margin-top: 1em; /* De nuevo, esto se basará en el tamaño de fuente del elemento padre más cercano con un tamaño de fuente establecido, que podría ser .card o .card-title dependiendo de la estructura del HTML */
+}
